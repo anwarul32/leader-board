@@ -5,6 +5,8 @@
 
 
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', 'Roboto', sans-serif;
     background-color: #F3F1FF;
 }
@@ -29,9 +31,10 @@ span{
 }
 
     /* top players style */
-    .top-players{
-        margin-bottom: 30px;
-    }
+
+.top-players{
+    margin-bottom: 30px;
+}
 .section-title{
     color: #562EFF;
     font-size: 24px;
@@ -126,4 +129,34 @@ span{
     text-align: center;
     border-radius: 50px;
     color: #ED6B4F;
+}
+
+    /* Media Queries */
+    /* Mobile Devices */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+        padding: 0;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+        align-items: center;
+    }
+    .course{
+        width: 94%;
+    }
+}
+    /* tablet Devices */
+@media only screen  and (min-width: 688px) and (max-width: 922px) {
+    .container{
+        width: 100%;
+        padding: 0;
+    }
+    .players,.courses{
+       
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
